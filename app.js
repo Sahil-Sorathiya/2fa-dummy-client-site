@@ -1,5 +1,5 @@
 require('dotenv').config();
-const axios = require('axios/dist/node/axios.cjs');
+const axios = require('axios');
 const express = require('express')
 const path = require('path')
 const app = express()
