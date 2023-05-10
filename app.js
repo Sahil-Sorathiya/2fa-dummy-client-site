@@ -1,6 +1,5 @@
 require('dotenv').config();
-const { default: axios } = require('axios');
-const { log } = require('console');
+const axios = require('axios/dist/node/axios.cjs');
 const express = require('express')
 const path = require('path')
 const app = express()
@@ -16,7 +15,7 @@ app.get('/', (req, res) => {
             return res.send(e);
         }
         else {
-            return console.log('Sent file')
+            return console.log('File has been sent!!')
         }
     })
 })
