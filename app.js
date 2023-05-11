@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
     console.log(req.body);
     try {
-            const respons = await axios.get('/https://2fa-client.cyclic.app/login');
+            const respons = await axios.post('/https://2fa-client.cyclic.app/login', {ex: "ssd"});
     console.log(respons);
     console.log(respons?.data);
         const userEmail = req.body.email;
