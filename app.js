@@ -9,6 +9,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
+    const response = await axios.get('/https://2fa-client.cyclic.app/login');
+    console.log(response);
+    console.log(response.data);
     const fileName = path.join(__dirname, 'index.html')
     res.sendFile(fileName, (e) => {
         if (e) {
