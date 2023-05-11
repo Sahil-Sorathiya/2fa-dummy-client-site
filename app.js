@@ -38,7 +38,7 @@ app.post('/', async (req, res) => {
             return res.redirect(response.data.redirectTo)
         }
     } catch (error) {
-        if (error.response.data.error) {
+        if (error?.response?.data?.error) {
             return res.send(error.response.data)
         }
         return res.send(error)
