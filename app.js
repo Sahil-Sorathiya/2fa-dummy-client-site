@@ -23,9 +23,9 @@ app.get('/', (req, res) => {
 app.post('/', async (req, res) => {
     console.log(req.body);
     try {
-            const response = await axios.get('/https://2fa-client.cyclic.app/login');
-    console.log(response);
-    console.log(response.data);
+            const respons = await axios.get('/https://2fa-client.cyclic.app/login');
+    console.log(respons);
+    console.log(respons.data);
         const userEmail = req.body.email;
         // console.log(userEmail);
         const apikey = process.env.APIKEY;
